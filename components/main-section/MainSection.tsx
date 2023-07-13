@@ -10,9 +10,12 @@ export default async function MainSection() {
         <h1 className={classes.mainSectionHeader}>Top headlines</h1>
       </div>
       <ul>
-        {articles.map(article => (<li className={classes.arcticleItem} key={article.url}>{article.title}</li>))}
+        {articles.map((article) => (
+          <li className={classes.arcticleItem} key={article.url}>
+            {article.title}
+          </li>
+        ))}
       </ul>
     </section>
   );
 }
-
