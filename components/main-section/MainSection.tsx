@@ -1,10 +1,9 @@
 import { getTopHeadlines } from "@/api/newsapi-org/top-headlines";
 import classes from "./MainSection.module.css";
+import { formatTime } from "@/utils/formatTime";
 
 export default async function MainSection() {
   const articles = await getTopHeadlines();
-
-  console.log("articles[0].source", articles[0].source);
 
   return (
     <section>
@@ -31,7 +30,7 @@ export default async function MainSection() {
                   dateTime={article.publishedAt}
                   className={classes.articlePublishedAt}
                 >
-                  {article.publishedAt}
+                  {formatTime(article.publishedAt)}
                 </time>
               </div>
             </div>
