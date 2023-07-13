@@ -1,8 +1,8 @@
-import TopHeadlinesPage from "@/app/top-headlines/page";
+import MainSection from "@/components/main-section/MainSection";
 
 export default async function Home() {
   return (
-    <TopHeadlinesPage/>
+    <MainSection/>
   )
 }
 
