@@ -5,7 +5,10 @@ export default async function MainSection() {
   const articles = await getTopHeadlines();
 
   return (
-    <section className="top-news">
+    <section>
+      <div>
+        <h1 className={classes.mainSectionHeader}>Top headlines</h1>
+      </div>
       <ul>
         {articles.map(article => (<li className={classes.arcticleItem} key={article.url}>{article.title}</li>))}
       </ul>
