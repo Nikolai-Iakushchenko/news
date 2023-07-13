@@ -3,11 +3,33 @@
   padding-bottom: 10px;
 }
 
-.arcticleItem {
+.article {
+  display: flex;
   border-top: 1px solid #E3E3E3;
   padding: 10px 0;
 }
 
-.arcticleItem:last-of-type {
+.article:last-of-type {
   padding-bottom: 0;
+}
+
+.articleSection {
+  width: 50%;
+  padding: 10px;
+}
+
+.articleTitle {
+  font-weight: bold;
+  color: #1f1f1f;
+  padding-top: 5px;
+}
+
+.articleDescription {
+  padding-bottom: 5px;
+}
+
+.articlePublishedAt {
+  font-weight: bold;
+  color: #444746;
+  font-size: 14px;
 }
