@@ -18,8 +18,14 @@
   padding: 10px;
 }
 
+.articleSection img {
+  border-radius: 10px;
+}
+
+
 .articleTitle {
-  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
   color: #1f1f1f;
   padding-top: 5px;
 }
@@ -30,6 +36,6 @@
 
 .articlePublishedAt {
   font-weight: bold;
-  color: #444746;
+  color: dimgray;
   font-size: 14px;
 }
