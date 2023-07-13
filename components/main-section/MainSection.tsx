@@ -1,5 +1,5 @@
-import {getTopHeadlines} from "@/api/newsapi-org/top-headlines";
-import classes from "./MainSection.module.css"
+import { getTopHeadlines } from "@/api/newsapi-org/top-headlines";
+import classes from "./MainSection.module.css";
 
 export default async function MainSection() {
   const articles = await getTopHeadlines();
@@ -13,6 +13,6 @@ export default async function MainSection() {
         {articles.map(article => (<li className={classes.arcticleItem} key={article.url}>{article.title}</li>))}
       </ul>
     </section>
-  )
+  );
 }
 
