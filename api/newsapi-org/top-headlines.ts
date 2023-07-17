@@ -1,5 +1,6 @@
 import { API_KEY } from "@/api/newsapi-org/api-key";
 import axios from "axios";
+import { NEWSAPI_DOMAIN } from "@/api/newsapi-org/constants";
 
 export interface TopHeadlines {
   source: { id: string; name: string };
@@ -12,7 +13,7 @@ export interface TopHeadlines {
   content: string;
 }
 
-export const topHeadlinesUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+export const topHeadlinesUrl = `https://${NEWSAPI_DOMAIN}/v2/top-headlines?country=us&apiKey=${API_KEY}`;
 
 export const getTopHeadlines = async (): Promise<TopHeadlines[]> => {
   const response = await axios.get(topHeadlinesUrl);
