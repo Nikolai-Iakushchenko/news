@@ -9,8 +9,11 @@ const initialState: ArticlesState = {
   articles: [],
 };
 
-export const articlesSlice = createSlice({
+const articlesSlice = createSlice({
   name: "articles",
   initialState,
   reducers: {},
 });
+
+const { reducer } = articlesSlice;
+export default reducer;
