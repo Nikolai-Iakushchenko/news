@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { rootReducer } from "@/store/rootReducer";
+import { articlesSlice } from "@/store/articles";
 
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    [articlesSlice.name]: articlesSlice.reducer,
+  },
   devTools: process.env.NODE_ENV !== "production",
 });
 
