@@ -8,7 +8,7 @@ export const getTopHeadlines = async (): Promise<Article[]> => {
   const response = await axios.get(topHeadlinesUrl);
 
   if (response.data.status !== "ok") {
-    console.log("response", response);
+    // console.log("response", response);
   }
 
   return response.data.articles;

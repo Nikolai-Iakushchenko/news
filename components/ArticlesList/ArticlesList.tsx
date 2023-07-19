@@ -7,7 +7,7 @@ interface ArticlesListProps {
 }
 
 const ArticlesList = ({ articles }: ArticlesListProps) => {
-  console.log("articles", articles);
+  // console.log("articles", articles);
 
   return (
     <ul>

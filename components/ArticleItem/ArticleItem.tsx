@@ -10,9 +10,9 @@ interface ArticleProps {
 }
 
 const ArticleItem = ({ article }: ArticleProps) => {
-  const ARTICLE_URL = article.title;
+  const ARTICLE_URL = encodeURI(article.title);
 
-  console.log("article", article);
+  // console.log("article", article);
 
   return (
     <li key={article.url}>
