@@ -1,24 +1,14 @@
-"use client";
-
+import { getTopHeadlines } from "@/api/newsapi-org/top-headlines";
 import classes from "./MainSection.module.css";
 import { formatTime } from "@/utils/formatTime";
-import { useEffect } from "react";
-import { getArticles, selectArticles } from "@/store/articles/articles";
-import { useSelector } from "react-redux";
-import { useAppDispatch } from "@/store/hooks";
 
-export default function MainSection() {
-  const dispatch = useAppDispatch();
-  const articles = useSelector(selectArticles);
-
-  useEffect(() => {
-    dispatch(getArticles());
-  }, []);
+export default async function MainSection() {
+  const articles = await getTopHeadlines();
 
   return (
     <section>
       <div>
-        <h1 className={classes.mainSectionHeader}>Top headlines!</h1>
+        <h1 className={classes.mainSectionHeader}>Top headlines</h1>
       </div>
       <ul>
         {articles.map((article) => (
