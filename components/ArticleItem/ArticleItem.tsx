@@ -10,7 +10,7 @@ interface ArticleProps {
 }
 
 const ArticleItem = ({ article }: ArticleProps) => {
-  const ARTICLE_URL = article.url.substring(article.url.lastIndexOf("/"));
+  const ARTICLE_URL = article.title;
 
   console.log("article", article);
 
