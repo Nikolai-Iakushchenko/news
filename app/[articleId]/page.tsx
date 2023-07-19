@@ -4,10 +4,10 @@ interface ArticleProps {
   params: { articleId: string };
 }
 
-const Article = ({ params }: ArticleProps) => {
+const ArticleDetails = ({ params }: ArticleProps) => {
   console.log("params.articleId", params.articleId);
 
-  return <div>Article</div>;
+  return <div>ArticleDetails</div>;
 };
 
-export default Article;
+export default ArticleDetails;
