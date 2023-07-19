@@ -1,6 +1,6 @@
 import React from "react";
 import { getTopHeadlines } from "@/api/newsapi-org/top-headlines";
-import classes from "@/components/main-section/MainSection.module.css";
+import classes from "./styles.module.css";
 import { formatTime } from "@/utils/formatTime";
 
 interface ArticleProps {
@@ -16,7 +16,7 @@ const ArticleDetails = async ({ params }: ArticleProps) => {
   if (currentArticle) {
     return (
       <div>
-        <h2>{currentArticle.title}</h2>
+        <h2 className={classes.title}>{currentArticle.title}</h2>
         <div>
           <img src={currentArticle.urlToImage} alt={currentArticle.title} />
         </div>
@@ -24,7 +24,7 @@ const ArticleDetails = async ({ params }: ArticleProps) => {
         <br />
 
         <p>{currentArticle.description}</p>
-        <time dateTime={currentArticle.publishedAt}>
+        <time className={classes.time} dateTime={currentArticle.publishedAt}>
           {formatTime(currentArticle.publishedAt)}
         </time>
       </div>
