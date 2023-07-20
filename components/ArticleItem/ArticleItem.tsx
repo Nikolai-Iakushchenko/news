@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "@/components/main-section/MainSection.module.css";
 import { formatTime } from "@/utils/formatTime";
 import { Article } from "@/api/newsapi-org/types";
 import Link from "next/link";
+import classes from "./ArticleItem.module.css";
 
 interface ArticleProps {
   article: Article;
@@ -11,8 +11,6 @@ interface ArticleProps {
 
 const ArticleItem = ({ article }: ArticleProps) => {
   const ARTICLE_URL = encodeURI(article.title);
-
-  // console.log("article", article);
 
   return (
     <li key={article.url}>

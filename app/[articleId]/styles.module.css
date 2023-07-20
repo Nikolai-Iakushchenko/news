@@ -1,7 +1,26 @@
 .title {
-  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1f1f1f;
+}
+
+.image {
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.content {
+  padding-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 .time {
-  font-style: italic;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: dimgray;
+  font-size: 14px;
+}
+
+.backHome {
+  color: blue;
 }
